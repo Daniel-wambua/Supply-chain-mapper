@@ -1,0 +1,33 @@
+# Test manifest for Dependency Vulnerability Mapper
+# These packages have confirmed CVEs in the OSV database
+# Run: python dependency_mapper.py scan requirements-vulnerable.txt
+
+# urllib3 - CVE-2023-45803 (Medium, 6.2) - Cookie leak issue
+urllib3==2.0.7
+
+# requests - CVE-2023-32681 (Medium, 6.1) - Proxy-Authorization header leak  
+requests==2.31.0
+
+# Pillow - CVE-2023-50447 (Critical, 9.8) - Arbitrary code execution via buffer overflow
+Pillow==10.1.0
+
+# Django - Multiple CVEs including CVE-2024-24680 (High)
+Django==4.2.7
+
+# Werkzeug - CVE-2024-34069 (High, 7.5) - debugger RCE
+Werkzeug==3.0.1
+
+# Jinja2 - CVE-2024-22195 (Medium, 4.6) - sandbox escape
+Jinja2==3.1.2
+
+# numpy - CVE-2024-1852 (Medium, 5.3) - f2py command injection
+numpy==1.24.3
+
+# setuptools - CVE-2024-6345 (High, 7.8) - RCE via download functions
+setuptools==68.0.0
+
+# idna - CVE-2024-3651 (Medium, 5.3) - resource consumption via slow string encoding
+idna==3.4
+
+# certifi - No known CVEs (should show as CLEAN - control test)
+certifi==2023.7.22
